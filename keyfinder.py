@@ -158,7 +158,7 @@ class Keyfinder:
         if verbose:            
             print('Key, prob')
             for candidate in in_best:
-                print(candidate.name +" {:.3}%".format(candidate.prior*100))
+                print(candidate.name +" {:.3}%  ---> {}".format(candidate.prior*100, self.keys[candidate.name].chords))
         return in_best[0]
         
     #Adds the new evidence to the old evidence.
@@ -182,7 +182,8 @@ class Keyfinder:
                 # print(name)
                 self.evidence[type_of_evidence].append(name)
         print('Evidence', self.evidence)
-        self.candidates(N=8, verbose = verbose)
+        self.candidates(N=6, verbose = verbose)
+    
     
 
     def __init__(self, notes=None, scales=None, evidence=None, tolerance= 0.01):
