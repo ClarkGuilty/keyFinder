@@ -91,7 +91,7 @@ evidence = ['A','B','E','F#','G']
 song_name='The Heimrich Maneuver'
 print(song_name)
 test.add_evidence(evidence)
-# test.add_evidence(chords, is_it_chords=True)
+# test.add_evidence(chords, is_it_chords=True)s
 
 
 
@@ -108,3 +108,15 @@ song_name='Angie'
 print(song_name)
 test.add_evidence(evidence)
 # test.add_evidence(chords, is_it_chords=True)
+
+#%%
+print("-------")
+test = Keyfinder(tolerance=0.1, )
+evidence = ['G', 'D','E']
+# notes = ['C','E','A','F','D']
+chords = [ 'F','Dm','G', ]
+
+song_name='I follow you'
+print(song_name)
+test.add_evidence(evidence)
+test.add_evidence(chords, is_it_chords=True)
